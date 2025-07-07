@@ -56,10 +56,12 @@ export const MainPage: React.FC = () => {
                                     <button className="slider-button">→</button>
                                 </div>
 
-                                <div className="card events-section div13">
+                                <div className="card events-section">
+                                    <div className="event-game">
                                         <div className="game-logo"></div>
+                                        <div className="event-time">14:30</div>
+                                    </div>
                                         <div className="event-details">
-                                            <div className="event-time">14:30</div>
                                             <div className="event-teams">
                                                 <div className="team-logo"></div>
                                                 <span>vs</span>
