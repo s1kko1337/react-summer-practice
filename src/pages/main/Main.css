@@ -702,11 +702,16 @@
     gap: calc(8px * var(--scale-factor));
     font-size: calc(14px * var(--scale-factor));
 }
+.team-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .team-logo {
     width: calc(85px * var(--scale-factor));
     height: calc(85px * var(--scale-factor));
-    background: var(--button-bg);
     border-radius: calc(4px * var(--scale-factor));
     flex-shrink: 0;
 }
@@ -742,4 +747,8 @@
 
     transition: all 0.3s ease;
     font-size: calc(14px * var(--scale-factor));
+}
+
+.text-versus {
+    font-size: 1.88rem
 }

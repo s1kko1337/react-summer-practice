@@ -95,7 +95,7 @@ export const MainPage: React.FC = () => {
                                     <div className="event-details">
                                         <div className="event-teams">
                                             <div className="team-logo team-1 image"></div>
-                                            <span>vs</span>
+                                            <span className="text-versus">vs</span>
                                             <div className="team-logo team-2 image"></div>
                                         </div>
                                     </div>
