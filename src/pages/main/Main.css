@@ -44,6 +44,8 @@
     --chat-input-width: calc(22.5rem * var(--scale-factor));
     --events-max-width: calc(34.38rem * var(--scale-factor));
     --events-max-height: calc(9.13rem * var(--scale-factor));
+    --chat-section-max-height: calc(31rem * var(--scale-factor));
+    --chat-messages-max-height: calc(25rem * var(--scale-factor));
 }
 
 @media screen and (max-width: 1920px) and (min-width: 1600px) {
@@ -497,8 +499,9 @@
 
 .chat-section {
     width: 100%;
-    height: auto;
+    height: var(--chat-section-max-height);
     max-width: 100%;
+    max-height: var(--chat-section-max-height);
     display: flex;
     flex-direction: column;
     padding: calc(16px * var(--scale-factor));
@@ -528,8 +531,34 @@
     gap: calc(12px * var(--scale-factor));
     width: 100%;
     max-width: calc(var(--chat-input-width) + calc(2.5rem * var(--scale-factor)) + calc(8px * var(--scale-factor)));
+    max-height: var(--chat-messages-max-height);
     box-sizing: border-box;
     overflow-y: auto;
+    padding-right: calc(4px * var(--scale-factor));
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: calc(6px * var(--scale-factor));
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: calc(3px * var(--scale-factor));
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: calc(3px * var(--scale-factor));
+    transition: background 0.3s ease;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.chat-messages {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
 }
 
 .chat-message {
@@ -554,7 +583,7 @@
 
 .chat-username {
     font-size: calc(12px * var(--scale-factor));
-    color: var(--accent-color);
+    color: var(--text-primary);
     margin-bottom: calc(4px * var(--scale-factor));
     font-weight: 500;
 }
@@ -571,7 +600,6 @@
 .chat-input-container {
     display: flex;
     flex-direction: row;
-    width: 100$;
     justify-content: space-between;
     align-items: center;
     gap: calc(8px * var(--scale-factor));

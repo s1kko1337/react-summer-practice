@@ -117,7 +117,7 @@ export const MainPage: React.FC = () => {
                                 <div className="text-link">CyberSportsPortal.ru</div>
                             </div>
                             <div className="card chat-section">
-                                <div className="chat-header">Чат <div className="online-ellipse"></div> онлайн</div>
+                                <div className="chat-header">Чат <div className="online-ellipse"></div> онлайн 1251</div>
                                 <div className="chat-messages">
                                     <div className="chat-message">
                                         <div className="chat-avatar avatar-1 image"></div>
@@ -134,25 +134,25 @@ export const MainPage: React.FC = () => {
                                     <div className="chat-message">
                                         <div className="chat-avatar avatar-3 image"></div>
                                         <div className="chat-content">
-                                            <div className="chat-text"><span className="chat-username">[Vishnyakov]</span>Отлично! А у тебя как?</div>
+                                            <div className="chat-text"><span className="chat-username">[Vishnyakov]</span>&nbsp;ЗВЕРЯ 🐉 НЕТ 🐉СИЛЬНЕЙ 🐉ДРАКОНА 🐉 СПИРИТ 🐉ГОРДОСТЬ 🐉 РЕГИОНА🐉.</div>
                                         </div>
                                     </div>
                                     <div className="chat-message">
                                         <div className="chat-avatar avatar-4 image"></div>
                                         <div className="chat-content">
-                                            <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
+                                            <div className="chat-text"><span className="chat-username">[Batya]</span>&nbsp;Таганрог рад.</div>
                                         </div>
                                     </div>
                                     <div className="chat-message">
                                         <div className="chat-avatar avatar-5 image"></div>
                                         <div className="chat-content">
-                                            <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
+                                            <div className="chat-text"><span className="chat-username">[Spirit lover]</span>&nbsp;Team Spirit one love.</div>
                                         </div>
                                     </div>
                                     <div className="chat-message">
                                         <div className="chat-avatar avatar-6 image"></div>
                                         <div className="chat-content">
-                                            <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
+                                            <div className="chat-text"><span className="chat-username">[Champion]</span>&nbsp;Пишу Вам об очередном случае - мой сын снова... </div>
                                         </div>
                                     </div>
                                 </div>
