@@ -47,6 +47,8 @@
     --events-max-height: calc(9.13rem * var(--scale-factor));
     --chat-section-max-height: calc(31rem * var(--scale-factor));
     --chat-messages-max-height: calc(25rem * var(--scale-factor));
+
+    --button-bg: rgba(29, 23, 20, 0.25);
 }
 
 @media screen and (max-width: 1920px) and (min-width: 1600px) {
@@ -207,13 +209,44 @@
     display: flex;
     max-height: fit-content;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: calc(16px * var(--scale-factor));
     flex-wrap: wrap;
     background: transparent;
     padding: 0;
     margin-bottom: calc(9px * var(--scale-factor));
     width: 92.5%;
+}
+
+.date-container {
+    display: flex;
+    align-items: center;
+    padding: calc(8px * var(--scale-factor)) calc(16px * var(--scale-factor));
+    background: var(--card-bg);
+    backdrop-filter: var(--card-blur);
+    border-radius: calc(12px * var(--scale-factor));
+    border: calc(1px * var(--scale-factor)) solid var(--card-border);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.date-container:hover {
+    transform: translateY(calc(-2px * var(--scale-factor)));
+    box-shadow: var(--hover-shadow);
+}
+
+.current-date {
+    color: var(--text-primary);
+    font-size: calc(14px * var(--scale-factor));
+    font-weight: 500;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: calc(16px * var(--scale-factor));
 }
 
 .search-container {
@@ -452,7 +485,7 @@
 .slider-button:hover {
     border-radius: 50%;
     border: calc(1px * var(--scale-factor)) solid var(--card-border);
-    background: var(--accent-color);
+    background: var(--button-bg);
 }
 
 .slider-numbers {
@@ -482,14 +515,9 @@
     transition: all 0.3s ease;
 }
 
-.slider-number.active {
-    border: calc(1px * var(--scale-factor)) solid var(--card-border);
-    background: var(--accent-color);
-    color: var(--text-primary);
-}
 
 .slider-number:hover {
-    background: var(--accent-color);
+    background: var(--button-bg);
 }
 
 .chat-section {
@@ -633,7 +661,7 @@
 }
 
 .chat-send-button:hover {
-    background: var(--accent-color);
+    background: var(--button-bg);
     transform: scale(1.05);
 }
 
@@ -715,6 +743,10 @@
     align-items: center;
 }
 
+.team-text{
+    font-size: var(--h2-font-size);
+}
+
 .team-logo {
     width: calc(85px * var(--scale-factor));
     height: calc(85px * var(--scale-factor));
@@ -739,7 +771,7 @@
 }
 
 .events-controls {
-    background-color: rgba(29, 23, 20, 0.25);
+    background-color: var(--button-bg);
     display: flex;
     border-radius: 25%;
     flex-direction: column;
@@ -754,6 +786,10 @@
     box-sizing: border-box;
     box-shadow: var(--card-shadow);
     padding: calc(5px * var(--scale-factor));
+}
+
+.events-controls:hover{
+    box-shadow: var(--hover-shadow);
 }
 
 .events-scroll-button {

@@ -1,24 +1,51 @@
 import './Main.css';
 
+import React, { useEffect,useState } from 'react';
+
 export const MainPage: React.FC = () => {
+    const [currentDate, setCurrentDate] = useState<string>('');
+
+    useEffect(() => {
+        const updateDate = () => {
+            const now = new Date();
+            const options: Intl.DateTimeFormatOptions = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+            const formattedDate = now.toLocaleDateString('ru-RU', options);
+            setCurrentDate(formattedDate);
+        };
+
+        updateDate();
+
+        const interval = setInterval(updateDate, 60000);
+
+        return () => clearInterval(interval);
+    }, []);
     return (
         <div className="main-page">
             <div className="main-container">
                 <div className="parent">
 
                     <div className="header-section">
-                        <div className="search-container">
-                            <input
-                                type="text"
-                                placeholder="Поиск..."
-                                className="search-input"
-                            />
-                            <svg width="14.286133" height="14.285767" viewBox="0 0 14.2861 14.2858" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <defs />
-                                <path id="Vector" d="M14.24 13.25L9.6 8.62C10.32 7.69 10.71 6.55 10.71 5.35C10.71 3.92 10.15 2.58 9.14 1.56C8.13 0.55 6.78 0 5.35 0C3.92 0 2.58 0.55 1.56 1.56C0.55 2.58 0 3.92 0 5.35C0 6.78 0.55 8.13 1.56 9.14C2.58 10.15 3.92 10.71 5.35 10.71C6.55 10.71 7.68 10.32 8.62 9.6L13.25 14.24C13.27 14.25 13.28 14.26 13.3 14.27C13.32 14.28 13.34 14.28 13.36 14.28C13.37 14.28 13.39 14.28 13.41 14.27C13.43 14.26 13.45 14.25 13.46 14.24L14.24 13.46C14.25 13.45 14.26 13.43 14.27 13.41C14.28 13.4 14.28 13.38 14.28 13.36C14.28 13.34 14.28 13.32 14.27 13.3C14.26 13.28 14.25 13.27 14.24 13.25ZM8.18 8.18C7.42 8.94 6.42 9.35 5.35 9.35C4.28 9.35 3.28 8.94 2.52 8.18C1.77 7.42 1.35 6.42 1.35 5.35C1.35 4.28 1.77 3.28 2.52 2.52C3.28 1.77 4.28 1.35 5.35 1.35C6.42 1.35 7.43 1.77 8.18 2.52C8.94 3.28 9.35 4.28 9.35 5.35C9.35 6.42 8.94 7.43 8.18 8.18Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
-                            </svg>
+                        <div className="date-container">
+                            <div className="current-date">{currentDate}</div>
                         </div>
-                        <div className="icon-buttons">
+                        <div className="header-right">
+                            <div className="search-container">
+                                <input
+                                    type="text"
+                                    placeholder="Поиск..."
+                                    className="search-input"
+                                />
+                                <svg width="14.286133" height="14.285767" viewBox="0 0 14.2861 14.2858" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <defs />
+                                    <path id="Vector" d="M14.24 13.25L9.6 8.62C10.32 7.69 10.71 6.55 10.71 5.35C10.71 3.92 10.15 2.58 9.14 1.56C8.13 0.55 6.78 0 5.35 0C3.92 0 2.58 0.55 1.56 1.56C0.55 2.58 0 3.92 0 5.35C0 6.78 0.55 8.13 1.56 9.14C2.58 10.15 3.92 10.71 5.35 10.71C6.55 10.71 7.68 10.32 8.62 9.6L13.25 14.24C13.27 14.25 13.28 14.26 13.3 14.27C13.32 14.28 13.34 14.28 13.36 14.28C13.37 14.28 13.39 14.28 13.41 14.27C13.43 14.26 13.45 14.25 13.46 14.24L14.24 13.46C14.25 13.45 14.26 13.43 14.27 13.41C14.28 13.4 14.28 13.38 14.28 13.36C14.28 13.34 14.28 13.32 14.27 13.3C14.26 13.28 14.25 13.27 14.24 13.25ZM8.18 8.18C7.42 8.94 6.42 9.35 5.35 9.35C4.28 9.35 3.28 8.94 2.52 8.18C1.77 7.42 1.35 6.42 1.35 5.35C1.35 4.28 1.77 3.28 2.52 2.52C3.28 1.77 4.28 1.35 5.35 1.35C6.42 1.35 7.43 1.77 8.18 2.52C8.94 3.28 9.35 4.28 9.35 5.35C9.35 6.42 8.94 7.43 8.18 8.18Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
+                                </svg>
+                            </div>
+                            <div className="icon-buttons">
                             <button className="icon-button">
                                 <svg width="16.500000" height="21.607178" viewBox="0 0 16.5 21.6072" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -46,6 +73,7 @@ export const MainPage: React.FC = () => {
                                 </svg>
                             </button>
 
+                            </div>
                         </div>
                     </div>
                     <div className="main-content-container">
@@ -94,9 +122,15 @@ export const MainPage: React.FC = () => {
                                     </div>
                                     <div className="event-details">
                                         <div className="event-teams">
-                                            <div className="team-logo team-1 image"></div>
+                                            <div className="team-container">
+                                                <div className="team-logo team-1 image"></div>
+                                                <div className="team-text">GG</div>
+                                            </div>
                                             <span className="text-versus">vs</span>
-                                            <div className="team-logo team-2 image"></div>
+                                            <div className="team-container">
+                                                <div className="team-logo team-2 image"></div>
+                                                <div className="team-text">Yandex</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="events-controls">
