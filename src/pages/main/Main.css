@@ -300,6 +300,7 @@
 .icon-button:hover {
     background: var(--accent-color);
     transform: scale(1.05);
+    box-shadow: var(--hover-shadow);
 }
 
 .news-card {
@@ -411,6 +412,7 @@
 .news-link:hover {
     opacity: 1;
     color: var(--text-primary);
+    text-shadow: var(--hover-shadow);
 }
 
 .logo-section {
@@ -486,6 +488,7 @@
     border-radius: 50%;
     border: calc(1px * var(--scale-factor)) solid var(--card-border);
     background: var(--button-bg);
+    box-shadow: var(--hover-shadow);
 }
 
 .slider-numbers {
@@ -518,6 +521,7 @@
 
 .slider-number:hover {
     background: var(--button-bg);
+    box-shadow: var(--hover-shadow);
 }
 
 .chat-section {
@@ -663,6 +667,7 @@
 .chat-send-button:hover {
     background: var(--button-bg);
     transform: scale(1.05);
+    box-shadow: var(--hover-shadow);
 }
 
 .events-section {
@@ -696,6 +701,7 @@
 
 .event-item:hover {
     background: var(--input-bg);
+    box-shadow: var(--hover-shadow);
 }
 
 .game-logo {
