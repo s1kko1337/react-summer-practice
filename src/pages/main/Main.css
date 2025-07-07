@@ -9,20 +9,27 @@
     --input-bg: rgba(255, 255, 255, 0.15);
     --button-bg: rgba(255, 255, 255, 0.2);
     --chat-message-bg: rgba(255, 255, 255, 0.05);
-    
+
     --main-blur: blur(10px);
     --card-blur: blur(10px);
     --main-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     --card-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     --button-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    --hover-shadow: 0 6px 20px #D5CAB9; 
+    --hover-shadow: 0 6px 20px #D5CAB9;
 
     --h1-font-size: 2.38rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;
 
+    --chat-font-size: 0.88rem;
+    --chat-line-height: 1.38rem;
+
     --small-card-border: 25px;
     --main-card-border: 50px;
+
+    --margin-right: 2.313rem;
+    --margin-bottom: 1.813rem;
+    --news-margin-bottom: 1.188rem;
 }
 
 .main-page {
@@ -86,24 +93,32 @@
     display: flex;
     flex-direction: row;
 }
+
 .news-container {
-    display:flex;
+    display: flex;
     flex-direction: row;
+    margin-bottom: var(--news-margin-bottom);
 }
 
-.right-container{
-    display:flex;
+.right-container {
+    display: flex;
     flex-direction: column;
     width: fit-content;
 }
 
-.left-bottom-container{
+.left-container {
     display: flex;
+    flex-direction: column;
+}
+
+.left-bottom-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
     flex-direction: column;
     align-items: center;
 }
 
-/* Header Section */
 .header-section {
     display: flex;
     justify-content: flex-end;
@@ -116,6 +131,8 @@
     backdrop-filter: none;
     box-shadow: none;
     padding: 0;
+    margin-bottom: 9px;
+    max-width: 92.5%;
 }
 
 .search-container {
@@ -174,6 +191,7 @@
 
 /* News Cards */
 .news-card {
+    margin-right: var(--margin-right);
     border-radius: var(--small-card-border);
     width: 26.06rem;
     min-height: 33.81rem;
@@ -186,7 +204,7 @@
 }
 
 .news-image {
-    width:23.94rem;
+    width: 23.94rem;
     height: 21.13rem;
     background: var(--input-bg);
     border-radius: 12px;
@@ -257,6 +275,7 @@
 
 /* Logo Section */
 .logo-section {
+    margin-bottom: var(--margin-bottom);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -347,8 +366,8 @@
 
 /* Chat Section */
 .chat-section {
-    width: 31.25rem;
-    height: 28.44rem;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -367,13 +386,12 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    overflow-y: auto;
-    max-height: 200px;
-    min-height: 150px;
 }
 
 .chat-message {
     display: flex;
+    font-size: var(--chat-font-size);
+    line-height: var(--chat-line-height);
     gap: 12px;
     padding: 10px;
 }
@@ -406,20 +424,23 @@
 
 .chat-input-container {
     display: flex;
-    gap: 8px;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .chat-input {
-    flex: 1;
-    background: var(--input-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 20px;
-    padding: 10px 16px;
-    color: var(--text-primary);
-    outline: none;
-    font-size: 14px;
-    box-shadow: var(--button-shadow);
+    position: static;
+    width: 22.5rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0rem 0.75rem 0rem 0.75rem;
+    border: 0.06rem solid rgb(217, 217, 217);
+    border-radius: 0.5rem;
+    background: rgb(255, 255, 255);
 }
 
 .chat-input::placeholder {
@@ -427,18 +448,18 @@
 }
 
 .chat-send-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--accent-color);
-    border: none;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: var(--button-shadow);
-    font-size: 16px;
+    align-items: center;
+    padding: 0rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    box-sizing: border-box;
+    border: 0.06rem solid rgb(217, 217, 217);
+    border-radius: 0.5rem;
+
+    background: rgba(0, 0, 0, 0.04);
 }
 
 .chat-send-button:hover {
@@ -518,12 +539,14 @@
     border-radius: 4px;
     flex-shrink: 0;
 }
-.event-game{
+
+.event-game {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .events-controls {
     display: flex;
     flex-direction: column;
