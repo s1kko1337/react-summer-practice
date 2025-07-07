@@ -422,10 +422,12 @@
 
 .slider-section {
     display: flex;
+    min-height: 3.31rem;
     align-items: center;
     justify-content: space-between;
     max-width: fit-content;
     gap: calc(16px * var(--scale-factor));
+    margin-bottom: var(--margin-bottom);
 }
 
 .slider-section:hover, .events-section:hover, .chat-section:hover, .logo-section:hover{
@@ -671,7 +673,6 @@
 .game-logo {
     width: calc(64px * var(--scale-factor));
     height: calc(64px * var(--scale-factor));
-    background: var(--accent-color);
     border-radius: calc(8px * var(--scale-factor));
     flex-shrink: 0;
 }
@@ -707,11 +708,16 @@
     gap: calc(8px * var(--scale-factor));
     font-size: calc(14px * var(--scale-factor));
 }
+.team-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .team-logo {
     width: calc(85px * var(--scale-factor));
     height: calc(85px * var(--scale-factor));
-    background: var(--button-bg);
     border-radius: calc(4px * var(--scale-factor));
     flex-shrink: 0;
 }
@@ -764,16 +770,10 @@
     font-size: calc(14px * var(--scale-factor));
 }
 
-.events-scroll-button:hover {
-      border-radius: 50%;
-    border: calc(1px * var(--scale-factor)) solid var(--card-border);
-    background: var(--accent-color);
-    box-shadow: var(--hover-shadow);
+.text-versus {
+    font-size: 1.88rem
 }
 
-.events-scroll-button:hover {
-    background: var(--accent-color);
-    box-shadow: var(--hover-shadow);
-    transition: all 0.3s ease;
-    font-size: calc(14px * var(--scale-factor));
+.text-versus {
+    font-size: 1.88rem
 }
