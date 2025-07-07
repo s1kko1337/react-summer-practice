@@ -420,10 +420,12 @@
 
 .slider-section {
     display: flex;
+    min-height: 3.31rem;
     align-items: center;
     justify-content: space-between;
     max-width: fit-content;
     gap: calc(16px * var(--scale-factor));
+    margin-bottom: var(--margin-bottom);
 }
 
 .slider-section:hover, .events-section:hover, .chat-section:hover, .logo-section:hover{
@@ -669,7 +671,6 @@
 .game-logo {
     width: calc(64px * var(--scale-factor));
     height: calc(64px * var(--scale-factor));
-    background: var(--accent-color);
     border-radius: calc(8px * var(--scale-factor));
     flex-shrink: 0;
 }
@@ -755,7 +756,6 @@
 .events-scroll-button {
     width: calc(28px * var(--scale-factor));
     height: calc(28px * var(--scale-factor));
-
     background: transparent;
     border: transparent;
     border-radius: 50%;
