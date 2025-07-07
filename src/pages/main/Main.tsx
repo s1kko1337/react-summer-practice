@@ -57,7 +57,6 @@ export const MainPage: React.FC = () => {
                                 </div>
 
                                 <div className="card events-section div13">
-                                    <div className="event-item">
                                         <div className="game-logo"></div>
                                         <div className="event-details">
                                             <div className="event-time">14:30</div>
@@ -70,7 +69,6 @@ export const MainPage: React.FC = () => {
                                         <div className="events-controls">
                                             <button className="events-scroll-button">↑</button>
                                             <button className="events-scroll-button">↓</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -84,35 +82,37 @@ export const MainPage: React.FC = () => {
                                     <span className="red-text">побеждать!</span>
                                 </div>
                             </div>
-                            <div className="card chat-section div9">
+                            <div className="card chat-section">
                                 <div className="chat-header">Чат 123123 онлайн</div>
                                 <div className="chat-messages">
                                     <div className="chat-message">
                                         <div className="chat-avatar"></div>
                                         <div className="chat-content">
-                                            <div className="chat-username">[Пользователь1]</div>
-                                            <div className="chat-text">Привет всем! Как дела?</div>
+                                            <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
                                         </div>
                                     </div>
                                     <div className="chat-message">
                                         <div className="chat-avatar"></div>
                                         <div className="chat-content">
-                                            <div className="chat-username">[Пользователь2]</div>
-                                            <div className="chat-text">Отлично! А у тебя как?</div>
+                                            <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
                                         </div>
                                     </div>
                                     <div className="chat-message">
                                         <div className="chat-avatar"></div>
                                         <div className="chat-content">
-                                            <div className="chat-username">[Пользователь3]</div>
-                                            <div className="chat-text">Кто играет сегодня?</div>
+                                            <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
                                         </div>
                                     </div>
                                     <div className="chat-message">
                                         <div className="chat-avatar"></div>
                                         <div className="chat-content">
-                                            <div className="chat-username">[Модератор]</div>
-                                            <div className="chat-text">Добро пожаловать в чат!</div>
+                                            <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
+                                        </div>
+                                    </div>
+                                    <div className="chat-message">
+                                        <div className="chat-avatar"></div>
+                                        <div className="chat-content">
+                                            <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
                                         </div>
                                     </div>
                                 </div>
