@@ -296,12 +296,15 @@
 .news-image.news-2 {
     background-image: url("./images/Image2.png");
 }
+
 .team-logo.team-1 {
     background-image: url("./images/logo1.png");
+    background-color: transparent;
 }
 
 .team-logo.team-2 {
     background-image: url("./images/logo2.png");
+    background-color: transparent;
 }
 
 .avatar-1{
@@ -715,7 +718,7 @@
     border-radius: calc(4px * var(--scale-factor));
     flex-shrink: 0;
 }
-.online-ellipse{
+.online-ellipse {
     display: inline-block;
     width: calc(0.75rem * var(--scale-factor));
     height: calc(0.75rem * var(--scale-factor));
@@ -739,14 +742,33 @@
     flex-direction: column;
     gap: calc(8px * var(--scale-factor));
     flex-shrink: 0;
+    background: var(--card-bg);
+    backdrop-filter: var(--card-blur);
+    border-radius: var(--main-card-border);
+    border: calc(1px * var(--scale-factor)) solid var(--card-border);
+    color: var(--text-primary);
+    box-sizing: border-box;
+    box-shadow: var(--card-shadow);
+    padding: calc(5px * var(--scale-factor));
 }
 
 .events-scroll-button {
     width: calc(28px * var(--scale-factor));
     height: calc(28px * var(--scale-factor));
 
+    background: transparent;
+    border: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
     transition: all 0.3s ease;
     font-size: calc(14px * var(--scale-factor));
+}
+
+.text-versus {
+    font-size: 1.88rem
 }
 
 .text-versus {
