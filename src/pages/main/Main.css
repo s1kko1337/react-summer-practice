@@ -20,6 +20,9 @@
     --h1-font-size: 2.38rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;
+
+    --small-card-border: 25px;
+    --main-card-border: 50px;
 }
 
 .main-page {
@@ -64,7 +67,7 @@
 .card {
     background: var(--card-bg);
     backdrop-filter: var(--card-blur);
-    border-radius: 16px;
+    border-radius: var(--main-card-border);
     border: 1px solid var(--card-border);
     color: var(--text-primary);
     box-sizing: border-box;
@@ -193,6 +196,7 @@
 
 /* News Cards */
 .news-card {
+    border-radius: var(--small-card-border);
     width: 26.06rem;
     height: 33.81rem;
     display: flex;
