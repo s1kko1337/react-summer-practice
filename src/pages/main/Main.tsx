@@ -51,7 +51,7 @@ export const MainPage: React.FC = () => {
                     <div className="main-content-container">
                         <div className="left-container">
                             <div className="news-container">
-                                <div className="card news-card div2">
+                                <div className="card news-card">
                                     <div className="news-image news-1 image"></div>
                                     <div className="news-content">
                                         <div className="news-title">ESL добавит поединок за третье место на всех турнирах VRS — шоу-матчей больше не будет</div>
@@ -59,7 +59,7 @@ export const MainPage: React.FC = () => {
                                     <div className="news-link">Подробнее</div>
                                 </div>
 
-                                <div className="card news-card div7">
+                                <div className="card news-card">
                                     <div className="news-image news-2 image"></div>
                                     <div className="news-content">
                                         <div className="news-title">PARIVISION переиграла Gaimin Gladiators в групповой стадии на FISSURE Universe: Episode 5</div>
@@ -117,18 +117,18 @@ export const MainPage: React.FC = () => {
                                 <div className="text-link">CyberSportsPortal.ru</div>
                             </div>
                             <div className="card chat-section">
-                                <div className="chat-header">Чат <div className="online-ellipse"></div> онлайн 1251</div>
+                                <div className="chat-header">Чат онлайн<div className="online-ellipse"></div> <span className="chat-online">4545</span>онлайн</div>
                                 <div className="chat-messages">
                                     <div className="chat-message">
                                         <div className="chat-avatar avatar-1 image"></div>
                                         <div className="chat-content">
-                                            <div className="chat-text"><span className="chat-username">[Chopper]</span>Спирит топ.</div>
+                                            <div className="chat-text"><span className="chat-username">[Chopper]</span>&nbsp;Спирит топ.</div>
                                         </div>
                                     </div>
                                     <div className="chat-message">
                                         <div className="chat-avatar avatar-2 image"></div>
                                         <div className="chat-content">
-                                            <div className="chat-text"><span className="chat-username">[Leonid]</span>Согласен.</div>
+                                            <div className="chat-text"><span className="chat-username">[Leonid]</span>&nbsp;Согласен.</div>
                                         </div>
                                     </div>
                                     <div className="chat-message">
