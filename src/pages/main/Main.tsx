@@ -52,7 +52,7 @@ export const MainPage: React.FC = () => {
                         <div className="left-container">
                             <div className="news-container">
                                 <div className="card news-card div2">
-                                    <div className="news-image news-1"></div>
+                                    <div className="news-image news-1 image"></div>
                                     <div className="news-content">
                                         <div className="news-title">ESL добавит поединок за третье место на всех турнирах VRS — шоу-матчей больше не будет</div>
                                     </div>
@@ -60,7 +60,7 @@ export const MainPage: React.FC = () => {
                                 </div>
 
                                 <div className="card news-card div7">
-                                    <div className="news-image news-2"></div>
+                                    <div className="news-image news-2 image"></div>
                                     <div className="news-content">
                                         <div className="news-title">PARIVISION переиграла Gaimin Gladiators в групповой стадии на FISSURE Universe: Episode 5</div>
                                     </div>
@@ -69,25 +69,34 @@ export const MainPage: React.FC = () => {
                             </div>
                             <div className="left-bottom-container">
                                 <div className="card slider-section">
-                                    <button className="slider-button">←</button>
+                                    <button className="slider-button"><svg width="6.507812" height="10.362305" viewBox="0 0 6.50781 10.3623" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <defs />
+                                        <path id="Vector" d="M6.5 1.16L6.5 0.1C6.5 0.01 6.4 -0.04 6.33 0.02L0.16 4.83C0.11 4.87 0.07 4.93 0.04 4.98C0.01 5.04 0 5.11 0 5.18C0 5.24 0.01 5.31 0.04 5.37C0.07 5.43 0.11 5.48 0.16 5.52L6.33 10.33C6.4 10.39 6.5 10.34 6.5 10.25L6.5 9.19C6.5 9.12 6.47 9.06 6.42 9.02L1.5 5.18L6.42 1.33C6.47 1.29 6.5 1.23 6.5 1.16Z" fill="#000000" fill-opacity="0.250000" fill-rule="evenodd" />
+                                    </svg>
+                                    </button>
                                     <div className="slider-numbers">
                                         <div className="slider-number active">1</div>
                                         <div className="slider-number">2</div>
                                         <div className="slider-number">3</div>
                                     </div>
-                                    <button className="slider-button">→</button>
+                                    <button className="slider-button"><svg width="6.507812" height="10.363647" viewBox="0 0 6.50781 10.3636" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <defs />
+                                        <path id="Vector" d="M6.33 4.83L0.17 0.02C0.16 0.01 0.14 0 0.12 0C0.1 -0.01 0.07 0 0.06 0.01C0.04 0.02 0.02 0.03 0.01 0.05C0 0.06 0 0.08 0 0.1L0 1.16C0 1.23 0.03 1.29 0.08 1.33L5 5.18L0.08 9.02C0.03 9.06 0 9.13 0 9.19L0 10.25C0 10.34 0.1 10.39 0.17 10.34L6.33 5.52C6.39 5.48 6.43 5.43 6.46 5.37C6.49 5.31 6.5 5.24 6.5 5.18C6.5 5.11 6.49 5.04 6.46 4.98C6.43 4.93 6.39 4.87 6.33 4.83Z" fill="#000000" fill-opacity="0.450000" fill-rule="evenodd" />
+                                    </svg>
+                                    </button>
                                 </div>
 
                                 <div className="card events-section">
                                     <div className="event-game">
-                                        <div className="game-logo"></div>
+                                        <div className="game-logo image game">
+                                        </div>
                                         <div className="event-time">14:30</div>
                                     </div>
                                     <div className="event-details">
                                         <div className="event-teams">
-                                            <div className="team-logo"></div>
+                                            <div className="team-logo team-1 image"></div>
                                             <span>vs</span>
-                                            <div className="team-logo"></div>
+                                            <div className="team-logo team-2 image"></div>
                                         </div>
                                     </div>
                                     <div className="events-controls">
@@ -108,34 +117,40 @@ export const MainPage: React.FC = () => {
                                 <div className="text-link">CyberSportsPortal.ru</div>
                             </div>
                             <div className="card chat-section">
-                                <div className="chat-header text-line">Чат <div className="online-ellipse"></div> онлайн</div>
+                                <div className="chat-header">Чат <div className="online-ellipse"></div> онлайн</div>
                                 <div className="chat-messages">
                                     <div className="chat-message">
-                                        <div className="chat-avatar"></div>
+                                        <div className="chat-avatar avatar-1 image"></div>
+                                        <div className="chat-content">
+                                            <div className="chat-text"><span className="chat-username">[Chopper]</span>Спирит топ.</div>
+                                        </div>
+                                    </div>
+                                    <div className="chat-message">
+                                        <div className="chat-avatar avatar-2 image"></div>
+                                        <div className="chat-content">
+                                            <div className="chat-text"><span className="chat-username">[Leonid]</span>Согласен.</div>
+                                        </div>
+                                    </div>
+                                    <div className="chat-message">
+                                        <div className="chat-avatar avatar-3 image"></div>
+                                        <div className="chat-content">
+                                            <div className="chat-text"><span className="chat-username">[Vishnyakov]</span>Отлично! А у тебя как?</div>
+                                        </div>
+                                    </div>
+                                    <div className="chat-message">
+                                        <div className="chat-avatar avatar-4 image"></div>
                                         <div className="chat-content">
                                             <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
                                         </div>
                                     </div>
                                     <div className="chat-message">
-                                        <div className="chat-avatar"></div>
+                                        <div className="chat-avatar avatar-5 image"></div>
                                         <div className="chat-content">
                                             <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
                                         </div>
                                     </div>
                                     <div className="chat-message">
-                                        <div className="chat-avatar"></div>
-                                        <div className="chat-content">
-                                            <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
-                                        </div>
-                                    </div>
-                                    <div className="chat-message">
-                                        <div className="chat-avatar"></div>
-                                        <div className="chat-content">
-                                            <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
-                                        </div>
-                                    </div>
-                                    <div className="chat-message">
-                                        <div className="chat-avatar"></div>
+                                        <div className="chat-avatar avatar-6 image"></div>
                                         <div className="chat-content">
                                             <div className="chat-text"><span className="chat-username">[Пользователь2]</span>Отлично! А у тебя как?</div>
                                         </div>
@@ -149,7 +164,6 @@ export const MainPage: React.FC = () => {
                                             className="chat-input"
                                         />
                                     </div>
-
 
                                     <button className="chat-send-button">
                                         <svg width="17.448242" height="17.446045" viewBox="0 0 17.4482 17.446" fill="none" xmlns="http://www.w3.org/2000/svg">

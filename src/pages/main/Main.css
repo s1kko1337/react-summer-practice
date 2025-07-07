@@ -129,6 +129,9 @@
     z-index: 2;
     width: 90%;
     height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
     border: calc(0.13rem * var(--scale-factor)) solid rgba(169, 169, 169, 0.3);
     border-radius: calc(3.13rem * var(--scale-factor));
@@ -136,6 +139,7 @@
     background: rgba(220, 209, 187, 0.29);
     padding: calc(20px * var(--scale-factor));
     box-shadow: var(--main-shadow);
+    overflow: hidden;
 }
 
 .parent {
@@ -143,6 +147,7 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
+    align-items: center;
 }
 
 .card {
@@ -180,6 +185,9 @@
     display: flex;
     flex-direction: column;
     width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .left-container {
@@ -205,7 +213,7 @@
     background: transparent;
     padding: 0;
     margin-bottom: calc(9px * var(--scale-factor));
-    max-width: 92.5%;
+    width: 92.5%;
 }
 
 .search-container {
@@ -264,7 +272,6 @@
     box-shadow: var(--hover-shadow);
 }
 
-/* News Cards */
 .news-card {
     margin-right: var(--margin-right);
     border-radius: var(--small-card-border);
@@ -291,14 +298,41 @@
 
 .news-image.news-1 {
     background-image: url("./images/Image1.png");
-    object-fit: contain;
 }
-
 .news-image.news-2 {
     background-image: url("./images/Image2.png");
-    object-fit: contain;
+}
+.team-logo.team-1 {
+    background-image: url("./images/logo1.png");
 }
 
+.team-logo.team-2 {
+    background-image: url("./images/logo2.png");
+}
+
+.avatar-1{
+    background-image: url("./images/avatars/av1.jpeg");
+}
+.avatar-2{
+    background-image: url("./images/avatars/av2.png");
+}
+.avatar-3{
+    background-image: url("./images/avatars/av3.webp");
+}
+.avatar-4{
+    background-image: url("./images/avatars/av4.jpg");
+    
+}
+
+.avatar-5{
+    background-image: url("./images/avatars/av5.png");
+    
+}
+
+.avatar-6{
+    background-image: url("./images/avatars/av6.webp");
+    
+}
 .news-content {
     display: flex;
     flex-direction: column;
@@ -347,7 +381,6 @@
     color: var(--text-primary);
 }
 
-/* Logo Section */
 .logo-section {
     margin-bottom: var(--margin-bottom);
     display: flex;
@@ -406,19 +439,19 @@
 .slider-button {
     width: calc(36px * var(--scale-factor));
     height: calc(36px * var(--scale-factor));
-    border-radius: 50%;
-    background: var(--button-bg);
-    border: calc(1px * var(--scale-factor)) solid var(--card-border);
+    background: none;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: var(--button-shadow);
+    transition: all 0.15s ease;
     font-size: calc(16px * var(--scale-factor));
 }
 
 .slider-button:hover {
+      border-radius: 50%;
+    border: calc(1px * var(--scale-factor)) solid var(--card-border);
     background: var(--accent-color);
     box-shadow: var(--hover-shadow);
 }
@@ -443,14 +476,15 @@
     order: 1;
     flex-grow: 0;
     margin: 0rem calc(0.25rem * var(--scale-factor));
-    border-radius: 50%;
-    background: var(--button-bg);
-    border: calc(1px * var(--scale-factor)) solid var(--card-border);
+    border-radius: 40%;
+    background: none;
+
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .slider-number.active {
+    border: calc(1px * var(--scale-factor)) solid var(--card-border);
     background: var(--accent-color);
     color: var(--text-primary);
     box-shadow: var(--hover-shadow);
@@ -464,9 +498,13 @@
 .chat-section {
     width: 100%;
     height: auto;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
+    padding: calc(16px * var(--scale-factor));
     gap: calc(16px * var(--scale-factor));
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .chat-header {
@@ -474,7 +512,13 @@
     font-weight: bold;
     text-align: center;
     padding-bottom: calc(12px * var(--scale-factor));
-    border-bottom: calc(1px * var(--scale-factor)) solid var(--card-border);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    max-width: calc(var(--chat-input-width) + calc(2.5rem * var(--scale-factor)) + calc(8px * var(--scale-factor)));
+    gap: calc(8px * var(--scale-factor));
+    box-sizing: border-box;
 }
 
 .chat-messages {
@@ -482,6 +526,10 @@
     display: flex;
     flex-direction: column;
     gap: calc(12px * var(--scale-factor));
+    width: 100%;
+    max-width: calc(var(--chat-input-width) + calc(2.5rem * var(--scale-factor)) + calc(8px * var(--scale-factor)));
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 
 .chat-message {
@@ -496,7 +544,6 @@
     width: calc(32px * var(--scale-factor));
     height: calc(32px * var(--scale-factor));
     border-radius: 50%;
-    background: var(--accent-color);
     flex-shrink: 0;
 }
 
@@ -524,6 +571,7 @@
 .chat-input-container {
     display: flex;
     flex-direction: row;
+    width: 100$;
     justify-content: space-between;
     align-items: center;
     gap: calc(8px * var(--scale-factor));
@@ -602,11 +650,21 @@
 }
 
 .game-logo {
-    width: calc(40px * var(--scale-factor));
-    height: calc(40px * var(--scale-factor));
+    width: calc(64px * var(--scale-factor));
+    height: calc(64px * var(--scale-factor));
     background: var(--accent-color);
     border-radius: calc(8px * var(--scale-factor));
     flex-shrink: 0;
+}
+
+.game-logo.game {
+  background-image: url("./images/gamelogo.png");
+}
+
+.image{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;     
+    background-position: center; 
 }
 
 .event-details {
@@ -632,23 +690,20 @@
 }
 
 .team-logo {
-    width: calc(24px * var(--scale-factor));
-    height: calc(24px * var(--scale-factor));
+    width: calc(85px * var(--scale-factor));
+    height: calc(85px * var(--scale-factor));
     background: var(--button-bg);
     border-radius: calc(4px * var(--scale-factor));
     flex-shrink: 0;
 }
 .online-ellipse{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 0.38rem;
-    border-radius: 50px;
-    height: 0.38rem;
-    left: 0;
-    top: 0;
-    border: 0.13rem solid rgb(255, 255, 255);
+    display: inline-block;
+    width: calc(0.75rem * var(--scale-factor));
+    height: calc(0.75rem * var(--scale-factor));
+    border-radius: 50%;
+    border: calc(0.1rem * var(--scale-factor)) solid rgb(255, 255, 255);
     background: rgb(82, 196, 26);
+    flex-shrink: 0;
 }
 
 .event-game {
