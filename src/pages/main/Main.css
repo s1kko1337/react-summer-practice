@@ -56,10 +56,8 @@
 }
 
 .parent {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    gap: 16px;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
 }
@@ -84,49 +82,25 @@
     transform: translateY(-2px);
 }
 
-/* Grid Layout Classes */
-.div1 {
-    grid-column: span 10 / span 10;
+.main-content-container {
+    display: flex;
+    flex-direction: row;
+}
+.news-container {
+    display:flex;
+    flex-direction: row;
 }
 
-.div2 {
-    grid-column: span 3 / span 3;
-    grid-row: span 4 / span 4;
-    grid-row-start: 2;
+.right-container{
+    display:flex;
+    flex-direction: column;
+    width: fit-content;
 }
 
-.div7 {
-    grid-column: span 3 / span 3;
-    grid-row: span 4 / span 4;
-    grid-column-start: 4;
-    grid-row-start: 2;
-}
-
-.div8 {
-    grid-column: span 4 / span 4;
-    grid-row: span 3 / span 3;
-    grid-column-start: 7;
-    grid-row-start: 2;
-}
-
-.div9 {
-    grid-column: span 4 / span 4;
-    grid-row: span 4 / span 4;
-    grid-column-start: 7;
-    grid-row-start: 5;
-}
-
-.div12 {
-    grid-column: span 2 / span 2;
-    grid-column-start: 3;
-    grid-row-start: 6;
-}
-
-.div13 {
-    grid-column: span 4 / span 4;
-    grid-row: span 2 / span 2;
-    grid-column-start: 2;
-    grid-row-start: 7;
+.left-bottom-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header Section */
@@ -204,6 +178,9 @@
     width: 26.06rem;
     min-height: 33.81rem;
     display: flex;
+    padding-top: 18px;
+    padding-left: 17px;
+    padding-right: 17px;
     flex-direction: column;
     height: 100%;
 }
@@ -283,6 +260,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 31.25rem;
+    height: 18.94rem;
     justify-content: center;
     text-align: center;
     gap: 16px;
@@ -304,6 +283,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: fit-content;
     gap: 16px;
 }
 
@@ -367,6 +347,8 @@
 
 /* Chat Section */
 .chat-section {
+    width: 31.25rem;
+    height: 28.44rem;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -465,7 +447,6 @@
     box-shadow: var(--hover-shadow);
 }
 
-/* Events Section */
 .events-section {
     position: relative;
     width: 100%;
