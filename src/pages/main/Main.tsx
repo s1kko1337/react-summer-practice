@@ -100,8 +100,16 @@ export const MainPage: React.FC = () => {
                                         </div>
                                     </div>
                                     <div className="events-controls">
-                                        <button className="events-scroll-button">↑</button>
-                                        <button className="events-scroll-button">↓</button>
+                                        <button className="events-scroll-button"><svg width="10.363281" height="6.507812" viewBox="0 0 10.3633 6.50781" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <defs />
+                                            <path id="Vector" d="M4.83 0.16L0.02 6.33C0.01 6.34 0 6.36 0 6.38C-0.01 6.4 0 6.42 0.01 6.44C0.02 6.46 0.03 6.48 0.05 6.49C0.06 6.5 0.08 6.5 0.1 6.5L1.16 6.5C1.23 6.5 1.29 6.47 1.33 6.42L5.18 1.5L9.02 6.42C9.06 6.47 9.12 6.5 9.19 6.5L10.25 6.5C10.34 6.5 10.39 6.4 10.33 6.33L5.52 0.16C5.48 0.11 5.43 0.07 5.37 0.04C5.31 0.01 5.24 0 5.18 0C5.11 0 5.04 0.01 4.99 0.04C4.93 0.07 4.87 0.11 4.83 0.16Z" fill="#D5CAB9" fill-opacity="1.000000" fill-rule="evenodd" />
+                                        </svg>
+                                        </button>
+                                        <button className="events-scroll-button"><svg width="10.362305" height="6.507812" viewBox="0 0 10.3623 6.50781" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <defs />
+                                            <path id="Vector" d="M1.16 0L0.1 0C0.01 0 -0.04 0.1 0.02 0.17L4.83 6.33C4.87 6.39 4.93 6.43 4.99 6.46C5.04 6.49 5.11 6.5 5.18 6.5C5.24 6.5 5.31 6.49 5.37 6.46C5.43 6.43 5.48 6.39 5.52 6.33L10.33 0.17C10.39 0.1 10.34 0 10.25 0L9.19 0C9.12 0 9.06 0.03 9.02 0.08L5.18 5L1.33 0.08C1.29 0.03 1.23 0 1.16 0Z" fill="#D5CAB9" fill-opacity="1.000000" fill-rule="evenodd" />
+                                        </svg>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

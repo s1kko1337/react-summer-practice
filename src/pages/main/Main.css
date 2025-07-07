@@ -32,6 +32,8 @@
     --margin-bottom: calc(1.813rem * var(--scale-factor));
     --news-margin-bottom: calc(1.188rem * var(--scale-factor));
     
+    --dark-bg: rgba(0, 0, 0, 0.4);
+
     --news-card-width: calc(26.06rem * var(--scale-factor));
     --news-card-height: calc(33.81rem * var(--scale-factor));
     --news-image-width: calc(23.94rem * var(--scale-factor));
@@ -139,7 +141,6 @@
     backdrop-filter: blur(calc(3.13rem * var(--scale-factor)));
     background: rgba(220, 209, 187, 0.29);
     padding: calc(20px * var(--scale-factor));
-    box-shadow: var(--main-shadow);
     overflow: hidden;
 }
 
@@ -161,13 +162,11 @@
     border: calc(1px * var(--scale-factor)) solid var(--card-border);
     color: var(--text-primary);
     box-sizing: border-box;
-    box-shadow: var(--card-shadow);
     padding: calc(5px * var(--scale-factor));
     transition: all 0.3s ease;
 }
 
 .card:hover {
-    box-shadow: var(--hover-shadow);
     transform: translateY(calc(-2px * var(--scale-factor)));
 }
 
@@ -229,7 +228,6 @@
     box-sizing: border-box;
     border: calc(0.06rem * var(--scale-factor)) solid rgb(217, 217, 217);
     border-radius: calc(0.38rem * var(--scale-factor));
-    box-shadow: 0rem calc(0.25rem * var(--scale-factor)) calc(0.25rem * var(--scale-factor)) 0rem rgba(0, 0, 0, 0.25);
     background: rgba(255, 255, 255, 0.4);
 }
 
@@ -263,14 +261,12 @@
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: var(--button-shadow);
     font-size: calc(16px * var(--scale-factor));
 }
 
 .icon-button:hover {
     background: var(--accent-color);
     transform: scale(1.05);
-    box-shadow: var(--hover-shadow);
 }
 
 .news-card {
@@ -293,7 +289,6 @@
     border-radius: calc(12px * var(--scale-factor));
     background-size: cover;
     background-position: center;
-    box-shadow: var(--button-shadow);
     margin-bottom: calc(12px * var(--scale-factor));
 }
 
@@ -425,7 +420,6 @@
     color: rgb(143, 11, 11);
 }
 
-/* Slider Section */
 .slider-section {
     display: flex;
     align-items: center;
@@ -434,8 +428,7 @@
     gap: calc(16px * var(--scale-factor));
 }
 
-.slider-section:hover, .events-section:hover, .chat-section:hover{
-        box-shadow:none;
+.slider-section:hover, .events-section:hover, .chat-section:hover, .logo-section:hover{
     transform: none;
 }
 
@@ -447,6 +440,7 @@
     border: none;
     display: flex;
     align-items: center;
+    border: calc(1px * var(--scale-factor)) solid transparent;
     justify-content: center;
     cursor: pointer;
     transition: all 0.15s ease;
@@ -454,10 +448,9 @@
 }
 
 .slider-button:hover {
-      border-radius: 50%;
+    border-radius: 50%;
     border: calc(1px * var(--scale-factor)) solid var(--card-border);
     background: var(--accent-color);
-    box-shadow: var(--hover-shadow);
 }
 
 .slider-numbers {
@@ -491,12 +484,10 @@
     border: calc(1px * var(--scale-factor)) solid var(--card-border);
     background: var(--accent-color);
     color: var(--text-primary);
-    box-shadow: var(--hover-shadow);
 }
 
 .slider-number:hover {
     background: var(--accent-color);
-    box-shadow: var(--hover-shadow);
 }
 
 .chat-section {
@@ -642,7 +633,6 @@
 .chat-send-button:hover {
     background: var(--accent-color);
     transform: scale(1.05);
-    box-shadow: var(--hover-shadow);
 }
 
 .events-section {
@@ -671,7 +661,6 @@
     padding: calc(12px * var(--scale-factor));
     background: var(--chat-message-bg);
     border-radius: calc(12px * var(--scale-factor));
-    box-shadow: var(--button-shadow);
     transition: all 0.3s ease;
 }
 
@@ -744,11 +733,14 @@
 }
 
 .events-controls {
+    background-color: rgba(29, 23, 20, 0.25);
     display: flex;
+    border-radius: 25%;
     flex-direction: column;
     gap: calc(8px * var(--scale-factor));
     flex-shrink: 0;
-    background: var(--card-bg);
+    background: var(--dark-bg);
+    box-shadow: 0px 0px 10px 0px rgb(213, 202, 185);
     backdrop-filter: var(--card-blur);
     border-radius: var(--main-card-border);
     border: calc(1px * var(--scale-factor)) solid var(--card-border);
@@ -782,4 +774,6 @@
 .events-scroll-button:hover {
     background: var(--accent-color);
     box-shadow: var(--hover-shadow);
+    transition: all 0.3s ease;
+    font-size: calc(14px * var(--scale-factor));
 }
