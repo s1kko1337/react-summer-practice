@@ -98,13 +98,13 @@ export const MainPage: React.FC = () => {
 
                         </div>
                         <div className="right-container">
-                            <div className="card logo-section div8">
+                            <div className="card logo-section">
                                 <div className="slogan">
-                                    Присоединяйся
-                                    <span className="red-text" >сегодня</span>
-                                    и начинай
-                                    <span className="red-text">побеждать!</span>
+                                    <div className="text-line">Присоединяйся</div>
+                                    <div className="text-line"><span className="red-text" >сегодня</span></div>
+                                    <div className="text-line">и начинай&nbsp;<span className="red-text">побеждать!</span></div>
                                 </div>
+                                <div className="text-link">CyberSportsPortal.ru</div>
                             </div>
                             <div className="card chat-section">
                                 <div className="chat-header">Чат 123123 онлайн</div>
